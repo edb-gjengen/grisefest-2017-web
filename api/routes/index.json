@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "pagination": {
+      "hasMore": false
+    },
+    "version": "201704091052"
+  },
+  "data": {
+    "config": {
+      "pageInfo": {
+        "title": "Den store grisefesten",
+        "ogDescription": "I forbindelse med ordensudnævnelse i Studentersamfundets orden Den Gyldne Gris, avholdes hvert fjerde år en Grisefest.",
+        "ogType": "website",
+        "ogSiteName": "Grisefest",
+        "ogUrl": "http://grisefest.no",
+        "lpUrl": "http://grisefest.no",
+        "robotsIndex": "index",
+        "timestamp": "201704091052"
+      },
+      "app": {
+        "type": "grisefest-app",
+        "options": {
+          "modules": [
+            {
+              "type": "commercial-dfp-ads",
+              "options": {
+                "prop1": "prop1value",
+                "prop2": "prop2value"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

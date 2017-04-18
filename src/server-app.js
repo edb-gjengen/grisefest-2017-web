@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 const favicon = require('serve-favicon');
 const useragent = require('express-useragent');
 const ms = require('ms');
+const apiHandler = require('./api-handler');
 
 /**
  * Environment
@@ -62,6 +63,9 @@ app.use(favicon(`${__dirname}/../public/static/favicon.ico`));
  * Serve static files
  */
 app.use(express.static(`${__dirname}/../public`, { maxAge: ms('7 days') }));
+
+// Serve API
+app.use('/api', apiHandler);
 
 /**
  * Use our server rendering function
