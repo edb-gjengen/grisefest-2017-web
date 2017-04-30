@@ -58,14 +58,14 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
    * we want to ignore in our
    * webpack bundle
    *
-   * NOTE: We just replace any
-   * server specific modules
-   * with a no-op (from npm)
+   * NOTE: We just replace any server specific modules with a no-op (from npm)
    */
-
   resolve: Object.assign({}, auroraWebpackConfig.resolve, {
     alias: Object.assign({}, (auroraWebpackConfig.resolve || {}).alias, {
-      redis: 'no-op',
+      'redis': 'no-op',
+      'mmdb-reader': 'no-op',
+      'big-integer': 'no-op',
     }),
+    extensions: ['.js', '.jsx', '.json'],
   }),
 });

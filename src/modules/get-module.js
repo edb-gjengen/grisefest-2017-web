@@ -17,44 +17,9 @@ if (typeof require.ensure !== 'function') {
  * The map of modules available to resolve to
  */
 const moduleMap = {
-  'demo-app': (callback) => {
+  'grisefest-app': (callback) => {
     require.ensure([], (require) => {
-      callback(null, require('./DemoAppModule/DemoAppModule.jsx'));
-    });
-  },
-  'demo-hom': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoHigherOrderModule/DemoHigherOrderModule.jsx'));
-    });
-  },
-  'demo-module': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModule/DemoModule.jsx'));
-    });
-  },
-  'demo-module-with-data': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModuleWithData/DemoModuleWithData.jsx'));
-    });
-  },
-  'demo-module-with-geolocation': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModuleWithGeolocation/DemoModuleWithGeolocation.jsx'));
-    });
-  },
-  'demo-module-with-personalization': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModuleWithPersonalization/DemoModuleWithPersonalization.jsx'));
-    });
-  },
-  'demo-module-with-randomization': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModuleWithRandomization/DemoModuleWithRandomization.jsx'));
-    });
-  },
-  'demo-module-with-redux': (callback) => {
-    require.ensure([], (require) => {
-      callback(null, require('./DemoModuleWithRedux/DemoModuleWithRedux.jsx'));
+      callback(null, require('./Grisefest2017App/Grisefest2017App.jsx'));
     });
   },
   'does-not-exist': (callback) => {
@@ -77,6 +42,7 @@ module.exports = (type) => {
    */
   return new Promise((resolve, reject) => {
     setImmediate(() => {
+      console.log('MODULE: ', type);
       if (!moduleMap[type]) {
         debug(`You are trying to render a module with type *${type}* which does not exist`);
       }

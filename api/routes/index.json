@@ -22,7 +22,7 @@
         "options": {
           "modules": [
             {
-              "type": "commercial-dfp-ads",
+              "type": "dns-banner",
               "options": {
                 "prop1": "prop1value",
                 "prop2": "prop2value"

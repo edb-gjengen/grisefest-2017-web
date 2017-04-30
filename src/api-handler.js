@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const handleApi = function(req, res, next) { // eslint-disable-line
   console.log('api route handler');
@@ -39,6 +40,7 @@ const handleApi = function(req, res, next) { // eslint-disable-line
 };
 
 const apiHandler = express();
+apiHandler.use(cors());
 apiHandler.get('/routes/(:page)?', handleApi);
 
 module.exports = apiHandler;

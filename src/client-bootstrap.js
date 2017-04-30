@@ -20,7 +20,7 @@ if (__DEVELOPMENT__) {
    * harmless and non-applicative (but annyoing) warnings..
    */
   Promise.config({
-    warnings: false
+    warnings: false,
   });
 
   /**
